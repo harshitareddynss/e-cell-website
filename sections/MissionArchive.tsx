@@ -2,6 +2,7 @@
 
 import CinematicHeading from "@/components/CinematicHeading";
 import ScrollReveal from "@/components/ScrollReveal";
+import Link from "next/link";
 
 export default function MissionArchive() {
   return (
@@ -140,11 +141,14 @@ export default function MissionArchive() {
         {/* BUTTON */}
         <ScrollReveal delay={0.12} className="flex justify-center mt-20">
 
-          <button className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]">
+          <Link
+            href="/archives"
+            className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]"
+          >
 
             Explore Stellar Archives
 
-          </button>
+          </Link>
 
         </ScrollReveal>
 
