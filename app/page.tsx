@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Navbar from "@/components/layout/Navbar";
 
 import Hero from "@/sections/Hero";
@@ -26,6 +27,14 @@ export default function Home() {
       <MissionArchive />
 
       
+=======
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+      <h1 className="text-5xl font-bold">
+        E-Cell View 🚀
+      </h1>
+>>>>>>> 90dbf92c9990d305b8c64e43369db04052232d73
     </main>
   );
 }
