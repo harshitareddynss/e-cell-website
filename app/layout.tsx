@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import PageLaunchTransition from "@/components/PageLaunchTransition";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,6 +41,8 @@ export default function RootLayout({
         <div className="relative z-10 min-h-screen flex flex-col">
           {children}
         </div>
+
+        <PageLaunchTransition />
       </body>
     </html>
   );

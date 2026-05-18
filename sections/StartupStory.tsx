@@ -2,6 +2,7 @@
 
 import CinematicHeading from "@/components/CinematicHeading";
 import ScrollReveal from "@/components/ScrollReveal";
+import Link from "next/link";
 
 export default function StartupStory() {
   return (
@@ -91,11 +92,14 @@ export default function StartupStory() {
               {/* BUTTON */}
               <div className="mt-12">
 
-                <button className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]">
+                <Link
+                  href="/stories"
+                  className="inline-flex px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]"
+                >
 
                   Read Full Story
 
-                </button>
+                </Link>
 
               </div>
 
