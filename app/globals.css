@@ -1,0 +1,239 @@
+@import "tailwindcss";
+/* =========================================
+   STARS
+========================================= */
+
+.starfield,
+.starfield::before,
+.starfield::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-repeat: repeat;
+  opacity: 0.85;
+}
+
+.starfield {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.75) 0 1px, transparent 1.5px);
+  background-position:
+    8px 14px,
+    40px 72px;
+  background-size:
+    96px 96px,
+    132px 132px;
+  animation: starTwinkle 4.5s ease-in-out infinite;
+}
+
+.starfield::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.65) 0 0.8px, transparent 1.4px);
+  background-position:
+    26px 34px,
+    92px 18px;
+  background-size:
+    72px 72px,
+    118px 118px;
+  animation: starTwinkle 3.2s ease-in-out infinite reverse;
+}
+
+.starfield::after {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0 1.3px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.8) 0 1px, transparent 1.8px);
+  background-position:
+    64px 28px,
+    14px 110px;
+  background-size:
+    168px 168px,
+    220px 220px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.55));
+  animation: starTwinkle 5.8s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+  }
+
+  45% {
+    opacity: 0.95;
+  }
+
+  70% {
+    opacity: 0.55;
+  }
+}
+/* =========================================
+   METEORS
+========================================= */
+
+.meteor {
+  position: absolute;
+
+  width: 220px;
+  height: 2px;
+
+  background: linear-gradient(
+    to left,
+    rgba(255, 140, 0, 0),
+    rgba(255, 140, 0, 1)
+  );
+
+  border-radius: 999px;
+
+  opacity: 0;
+
+  filter: drop-shadow(0 0 8px rgba(255, 140, 0, 0.8));
+
+  animation: meteorFall linear infinite;
+}
+
+/* METEOR HEAD */
+
+.meteor::after {
+  content: "";
+
+  position: absolute;
+
+  left: -5px;
+  top: -3px;
+
+  width: 8px;
+  height: 8px;
+
+  background: #ff8c00;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px #ff8c00,
+    0 0 20px #ff8c00,
+    0 0 40px #ff8c00;
+}
+
+/* POSITIONS */
+
+.meteor-1 {
+  top: 8%;
+  right: 10%;
+  animation-duration: 6s;
+}
+
+.meteor-2 {
+  top: 18%;
+  right: 25%;
+  animation-duration: 8s;
+}
+
+.meteor-3 {
+  top: 28%;
+  right: 5%;
+  animation-duration: 7s;
+}
+
+.meteor-4 {
+  top: 45%;
+  right: 20%;
+  animation-duration: 10s;
+}
+
+.meteor-5 {
+  top: 65%;
+  right: 12%;
+  animation-duration: 9s;
+}
+
+/* FALL ANIMATION */
+
+@keyframes meteorFall {
+  0% {
+    transform: translate(0, 0) rotate(-35deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-140vw, 140vh) rotate(-35deg);
+    opacity: 0;
+  }
+}
+
+.mission-heading-float {
+  animation: missionFloat 4.8s ease-in-out infinite;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: rgb(254 215 170);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 14px rgba(255, 115, 0, 0.55));
+}
+
+.section-kicker::before,
+.section-kicker::after {
+  width: 2.5rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(to right, transparent, rgba(251, 146, 60, 0.8));
+}
+
+.section-kicker::after {
+  background: linear-gradient(to left, transparent, rgba(251, 146, 60, 0.8));
+}
+
+.heading-accent-line {
+  animation: accentLineGlow 5.5s ease-in-out infinite;
+  text-shadow: 0 0 18px rgba(255, 115, 0, 0.18);
+}
+
+.scroll-orbit {
+  animation: scrollSignal 2.8s ease-in-out infinite;
+}
+
+@keyframes missionFloat {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(255, 115, 0, 0.35);
+  }
+
+  50% {
+    transform: translateY(-4px);
+    text-shadow:
+      0 0 16px rgba(255, 115, 0, 0.7),
+      0 0 34px rgba(255, 115, 0, 0.35);
+  }
+}
+
+@keyframes scrollSignal {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+@keyframes accentLineGlow {
+  0%, 100% {
+    text-shadow: 0 0 14px rgba(255, 115, 0, 0.16);
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 115, 0, 0.34),
+      0 0 42px rgba(255, 115, 0, 0.14);
+  }
+}
