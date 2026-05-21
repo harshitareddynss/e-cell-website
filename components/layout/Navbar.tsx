@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/team", label: "Crew" },
+  { href: "/crew", label: "Crew" },
   { href: "/events", label: "Missions" },
   { href: "/stories", label: "Startup Stories" },
   { href: "/ideas", label: "Idea Hub" },
@@ -50,11 +50,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm tracking-wider transition-all duration-300 ${
-                  isActive
+                className={`relative text-sm tracking-wider transition-all duration-300 ${isActive
                     ? "font-medium text-orange-400"
                     : "text-white/80 hover:text-orange-400"
-                }`}
+                  }`}
               >
                 {link.label}
 
