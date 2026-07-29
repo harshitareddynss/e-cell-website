@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export default function StartupStory() {
   return (
-    <section className="relative py-36 overflow-hidden">
+    <section className="relative overflow-hidden py-16 scroll-mt-[var(--navbar-height)] md:py-24">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/5 blur-[180px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10">
 
         {/* HEADING */}
-        <ScrollReveal className="text-center mb-24">
+        <ScrollReveal className="mb-16 text-center md:mb-20">
 
           <p className="section-kicker mb-6">
             Startup Story Of The Week
@@ -42,12 +42,9 @@ export default function StartupStory() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
 
             {/* LEFT IMAGE */}
-            <div className="min-h-[400px] bg-gradient-to-br from-orange-500/20 to-black border-r border-orange-500/10 flex items-center justify-center text-orange-200 text-3xl">
-
-              Startup
-              <br />
-              Story Image
-
+            <div className="min-h-[400px] bg-gradient-to-br from-orange-500/20 to-black border-r border-orange-500/10 flex items-center justify-center">
+              {/* TODO: Replace this placeholder canvas with the real startup story image asset once available. */}
+              <div className="h-20 w-20 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             {/* RIGHT CONTENT */}

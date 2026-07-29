@@ -7,11 +7,13 @@ interface CrewCardProps {
     name?: string;
     role?: string;
     image?: string;
+    centerTitle?: boolean;
 }
 
 export default function CrewCard({
     name = "Crew Member",
     role = "Team Role",
+    centerTitle = false,
 }: CrewCardProps) {
     return (
         <motion.div
@@ -52,17 +54,17 @@ export default function CrewCard({
             </div>
 
             {/* CONTENT */}
-            <div className="relative z-10 p-7">
+            <div className={`relative z-10 p-6 md:p-7 ${centerTitle ? "text-center" : ""}`}>
 
                 {/* ROLE */}
-                <p className="mb-3 text-xs uppercase tracking-[0.3em] text-orange-300">
+                <p className="mb-3 text-xs uppercase tracking-[0.3em] text-orange-300 whitespace-nowrap">
 
                     {role}
 
                 </p>
 
                 {/* NAME */}
-                <h3 className="text-2xl font-bold leading-tight text-white">
+                <h3 className="text-2xl font-bold leading-tight text-white whitespace-nowrap">
 
                     {name}
 

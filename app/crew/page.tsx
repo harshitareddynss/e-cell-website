@@ -53,6 +53,7 @@ export default function CrewPage() {
                             first="The Face"
                             second="Of E-Cell"
                             className="text-4xl md:text-5xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -72,6 +73,7 @@ export default function CrewPage() {
                             first="Strategy"
                             second="& Execution"
                             className="text-4xl md:text-5xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -93,7 +95,7 @@ export default function CrewPage() {
                     <div className="grid gap-8 md:grid-cols-2">
 
                         {prTeam.map((member, index) => (
-                            <CrewCard key={index} {...member} />
+                            <CrewCard key={index} {...member} centerTitle />
                         ))}
 
                     </div>
@@ -113,6 +115,7 @@ export default function CrewPage() {
                             first="Marketing & Branding"
                             second="Team"
                             className="text-3xl md:text-4xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -120,7 +123,7 @@ export default function CrewPage() {
                     <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
                         {marketingTeam.map((member, index) => (
-                            <CrewCard key={index} {...member} />
+                            <CrewCard key={index} {...member} centerTitle />
                         ))}
 
                     </div>
@@ -140,6 +143,7 @@ export default function CrewPage() {
                             first="Web & Tech"
                             second="Team"
                             className="text-3xl md:text-4xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -147,7 +151,7 @@ export default function CrewPage() {
                     <div className="grid gap-8 md:grid-cols-2">
 
                         {webTeam.map((member, index) => (
-                            <CrewCard key={index} {...member} />
+                            <CrewCard key={index} {...member} centerTitle />
                         ))}
 
                     </div>
@@ -167,6 +171,7 @@ export default function CrewPage() {
                             first="Event"
                             second="Managers"
                             className="text-3xl md:text-4xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -174,7 +179,7 @@ export default function CrewPage() {
                     <div className="grid gap-8 md:grid-cols-2">
 
                         {eventManagers.map((member, index) => (
-                            <CrewCard key={index} {...member} />
+                            <CrewCard key={index} {...member} centerTitle />
                         ))}
 
                     </div>
@@ -194,6 +199,7 @@ export default function CrewPage() {
                             first="Startup"
                             second="Assistance"
                             className="text-4xl md:text-5xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -210,11 +216,9 @@ export default function CrewPage() {
                             POWERING EVERY INITIATIVE
                         </p>
 
-                        <CinematicHeading
-                            first="Treasurer"
-                            second="Role"
-                            className="text-4xl md:text-5xl font-bold text-white"
-                        />
+                        <h2 className="text-4xl md:text-5xl font-bold text-white">
+                            Treasurer
+                        </h2>
 
                     </ScrollReveal>
 
@@ -234,6 +238,7 @@ export default function CrewPage() {
                             first="Coordination"
                             second="Team"
                             className="text-3xl md:text-4xl font-bold text-white"
+                            inline
                         />
 
                     </ScrollReveal>
@@ -241,7 +246,7 @@ export default function CrewPage() {
                     <div className="grid gap-8 md:grid-cols-2">
 
                         {coordinationTeam.map((member, index) => (
-                            <CrewCard key={index} {...member} />
+                            <CrewCard key={index} {...member} centerTitle />
                         ))}
 
                     </div>

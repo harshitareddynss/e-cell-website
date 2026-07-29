@@ -5,15 +5,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Insights() {
   return (
-    <section id="insights" className="relative py-36 overflow-hidden">
+    <section id="insights" className="relative overflow-hidden py-16 scroll-mt-[var(--navbar-height)] md:py-24">
 
       {/* SUBTLE GLOW */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/5 blur-[160px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10">
 
         {/* TOP HEADING */}
-        <ScrollReveal className="text-center mb-24">
+        <ScrollReveal className="mb-16 text-center md:mb-20">
 
           <p className="section-kicker mb-6">
             E-Cell Insights
@@ -25,8 +25,8 @@ export default function Insights() {
             className="text-4xl md:text-6xl font-bold text-white leading-tight"
           />
 
-          <p className="mt-8 text-white/60 max-w-3xl mx-auto text-lg leading-relaxed">
-            E-Cell Ingish empowers students with entrepreneurial exposure,
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/60">
+            E-Cell VIEW empowers students with entrepreneurial exposure,
             startup culture, innovation opportunities, and real-world
             leadership experiences.
           </p>
@@ -93,7 +93,7 @@ export default function Insights() {
         </div>
 
         {/* BUTTON */}
-        <ScrollReveal delay={0.12} className="flex justify-center mt-20">
+        <ScrollReveal delay={0.12} className="mt-16 flex justify-center">
 
           <button className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]">
             Explore Our Mission

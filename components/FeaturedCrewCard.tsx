@@ -63,14 +63,14 @@ export default function FeaturedCrewCard({
                 <div className="relative z-10 flex flex-col justify-center p-10 md:p-14">
 
                     {/* ROLE */}
-                    <p className="mb-5 text-sm uppercase tracking-[0.35em] text-orange-300">
+                    <p className="mb-5 text-sm uppercase tracking-[0.35em] text-orange-300 whitespace-nowrap">
 
                         {role}
 
                     </p>
 
                     {/* NAME */}
-                    <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl">
+                    <h2 className="text-4xl font-bold leading-tight text-white whitespace-nowrap md:text-5xl">
 
                         {name}
 

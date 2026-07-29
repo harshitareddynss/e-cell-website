@@ -43,10 +43,10 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center isolate pt-24 pb-24 lg:pt-20 lg:pb-20">
+    <section className="relative isolate mt-[var(--navbar-height)] flex min-h-[calc(100vh-var(--navbar-height))] items-center overflow-hidden py-10 sm:py-14 lg:py-0 scroll-mt-[var(--navbar-height)]">
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full grid lg:grid-cols-2 gap-14 items-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-14 px-6 md:px-10 lg:grid lg:grid-cols-2 lg:items-center">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -139,53 +139,36 @@ export default function Hero() {
               </p>
             </div>
 
-          {/* ANNOUNCEMENT CARD */}
-          <div className="rounded-[32px] border border-orange-500/20 bg-white/5 backdrop-blur-xl p-6 shadow-[0_0_50px_rgba(255,115,0,0.15)]">
+            {/* ANNOUNCEMENT CARD */}
+            <div className="rounded-[32px] border border-orange-500/20 bg-white/5 backdrop-blur-xl p-6 shadow-[0_0_50px_rgba(255,115,0,0.15)]">
+              <div className="flex min-h-[320px] flex-col items-center justify-center gap-6 text-center sm:min-h-[340px]">
+                <div className="relative flex flex-col items-center">
+                  <div className="mb-5 rounded-2xl border border-orange-500/40 bg-black/40 backdrop-blur-lg px-6 py-3 shadow-[0_0_20px_rgba(255,136,0,0.25)]">
+                    <p className="font-semibold text-white">
+                      No ongoing missions
+                    </p>
+                    <div className="absolute left-1/2 -bottom-2 h-4 w-4 -translate-x-1/2 rotate-45 border-r border-b border-orange-500/40 bg-black/40" />
+                  </div>
 
-            {/* TOP */}
-            <div className="flex items-center justify-between mb-6">
+                  <div className="relative inline-flex items-center justify-center rounded-full bg-orange-500/10 p-8 shadow-[0_0_40px_rgba(255,140,0,0.18)]">
+                    <div className="absolute inset-0 rounded-full bg-orange-500/10 blur-3xl" />
+                    <img
+                      src="/images/mascot/astronaut.png"
+                      alt="Astronaut"
+                      width={200}
+                      height={200}
+                      className="relative animate-float object-contain"
+                    />
+                  </div>
+                </div>
 
-              <div>
-
-                <p className="text-orange-300 text-sm tracking-[0.3em]">
-                  LIVE
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mt-2">
-                  Mission Brief
-                </h3>
-
+                <div>
+                  <p className="mt-3 text-gray-300">
+                    All caught up! Check back soon for exciting new missions.
+                  </p>
+                </div>
               </div>
-
-              <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" />
-
             </div>
-
-            {/* IMAGE PLACEHOLDER */}
-            <div className="h-52 rounded-2xl bg-gradient-to-br from-orange-500/20 to-black border border-orange-500/10 flex items-center justify-center text-orange-200 text-lg">
-              Event Poster
-            </div>
-
-            {/* TEXT */}
-            <div className="mt-6">
-
-              <h4 className="text-white text-xl font-semibold">
-                E-Summit 2026
-              </h4>
-
-              <p className="text-white/60 mt-3 leading-relaxed">
-                Registrations are now open for the biggest entrepreneurial
-                summit of the year.
-              </p>
-
-            </div>
-
-            {/* BUTTON */}
-            <button className="mt-6 w-full py-3 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_30px_rgba(255,115,0,0.45)]">
-              View Mission
-            </button>
-
-          </div>
           </div>
         </motion.div>
       </div>

@@ -1,3 +1,7 @@
+:root {
+  --navbar-height: 96px;
+}
+
 @import "tailwindcss";
 /* =========================================
    STARS
@@ -54,7 +58,9 @@
 }
 
 @keyframes starTwinkle {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.35;
   }
 
@@ -66,6 +72,7 @@
     opacity: 0.55;
   }
 }
+
 /* =========================================
    METEORS
 ========================================= */
@@ -76,11 +83,9 @@
   width: 220px;
   height: 2px;
 
-  background: linear-gradient(
-    to left,
-    rgba(255, 140, 0, 0),
-    rgba(255, 140, 0, 1)
-  );
+  background: linear-gradient(to left,
+      rgba(255, 140, 0, 0),
+      rgba(255, 140, 0, 1));
 
   border-radius: 999px;
 
@@ -203,7 +208,9 @@
 }
 
 @keyframes missionFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
     text-shadow: 0 0 10px rgba(255, 115, 0, 0.35);
   }
@@ -217,7 +224,9 @@
 }
 
 @keyframes scrollSignal {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, 0);
   }
 
@@ -227,7 +236,9 @@
 }
 
 @keyframes accentLineGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 14px rgba(255, 115, 0, 0.16);
   }
 
@@ -238,5 +249,22 @@
   }
 }
 
+@keyframes float {
 
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
 
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-section {
+  padding-top: calc(var(--navbar-height) + 20px);
+}

@@ -8,6 +8,7 @@ type CinematicHeadingProps = {
   second: string;
   as?: "h1" | "h2" | "h3";
   className?: string;
+  inline?: boolean;
 };
 
 const smoothEase = [0.22, 1, 0.36, 1] as const;
@@ -43,25 +44,23 @@ export default function CinematicHeading({
   second,
   as = "h2",
   className,
+  inline = false,
 }: CinematicHeadingProps) {
   const Heading = motion[as];
+  const headingClassName = `${className ?? ""} ${inline ? "inline-flex items-center justify-center flex-wrap gap-x-3 tracking-tight" : ""}`.trim();
 
   return (
     <Heading
-      className={className}
+      className={headingClassName}
       variants={headingVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.65 }}
     >
-      <motion.span className="block" variants={lineVariants}>
+      <motion.span className="text-inherit" variants={lineVariants}>
         {first}
-      </motion.span>
-
-      <motion.span
-        className="heading-accent-line block text-orange-400"
-        variants={lineVariants}
-      >
+      </motion.span>{" "}
+      <motion.span className="heading-accent-line text-orange-400 text-inherit" variants={lineVariants}>
         {second}
       </motion.span>
     </Heading>

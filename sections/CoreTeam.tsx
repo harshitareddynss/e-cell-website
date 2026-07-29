@@ -5,15 +5,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function CoreTeam() {
   return (
-    <section className="relative py-36 overflow-hidden">
+    <section className="relative overflow-hidden py-16 scroll-mt-[var(--navbar-height)] md:py-24">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/5 blur-[180px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10">
 
         {/* SECTION HEADING */}
-        <ScrollReveal className="text-center mb-24">
+        <ScrollReveal className="mb-16 text-center md:mb-20">
 
           <p className="section-kicker mb-6">
             Meet The Crew
@@ -63,12 +63,9 @@ export default function CoreTeam() {
           <ScrollReveal delay={0.12} direction="right" className="rounded-[36px] border border-orange-500/10 bg-white/5 backdrop-blur-xl p-8 hover:border-orange-500/30 transition-all duration-500">
 
             {/* IMAGE */}
-            <div className="h-72 rounded-[28px] bg-gradient-to-br from-orange-500/20 to-black border border-orange-500/10 flex items-center justify-center text-orange-200 text-2xl">
-
-              E-Summit
-              <br />
-              Achievement
-
+            <div className="h-72 rounded-[28px] bg-gradient-to-br from-orange-500/20 to-black border border-orange-500/10 flex items-center justify-center">
+              {/* TODO: Replace this placeholder card surface with the real E-Summit image asset once available. */}
+              <div className="h-20 w-20 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             {/* TEXT */}
@@ -120,7 +117,7 @@ export default function CoreTeam() {
         </div>
 
         {/* BUTTON */}
-        <ScrollReveal delay={0.1} className="flex justify-center mt-20">
+        <ScrollReveal delay={0.1} className="mt-16 flex justify-center">
 
           <button className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition-all duration-300 text-black font-semibold shadow-[0_0_35px_rgba(255,115,0,0.4)]">
 

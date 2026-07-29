@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export default function MissionArchive() {
   return (
-    <section className="relative py-36 overflow-hidden">
+    <section className="relative overflow-hidden py-16 scroll-mt-[var(--navbar-height)] md:py-24">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-500/5 blur-[200px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10">
 
         {/* HEADING */}
-        <ScrollReveal className="text-center mb-24">
+        <ScrollReveal className="mb-16 text-center md:mb-20">
 
           <p className="section-kicker mb-6">
             Stellar Archives
@@ -42,10 +42,9 @@ export default function MissionArchive() {
           <ScrollReveal delay={0.05} className="group rounded-[32px] overflow-hidden border border-orange-500/10 bg-white/5 backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500">
 
             {/* IMAGE */}
-            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center text-orange-200 text-2xl">
-
-              E-Summit
-
+            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center">
+              {/* TODO: Replace this placeholder archive tile with the real mission image asset once available. */}
+              <div className="h-16 w-16 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             {/* TEXT */}
@@ -67,10 +66,9 @@ export default function MissionArchive() {
           {/* CARD 2 */}
           <ScrollReveal delay={0.13} className="group rounded-[32px] overflow-hidden border border-orange-500/10 bg-white/5 backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500">
 
-            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center text-orange-200 text-2xl">
-
-              Hackathon
-
+            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center">
+              {/* TODO: Replace this placeholder archive tile with the real mission image asset once available. */}
+              <div className="h-16 w-16 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             <div className="p-6">
@@ -91,10 +89,9 @@ export default function MissionArchive() {
           {/* CARD 3 */}
           <ScrollReveal delay={0.21} className="group rounded-[32px] overflow-hidden border border-orange-500/10 bg-white/5 backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500">
 
-            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center text-orange-200 text-2xl">
-
-              Workshop
-
+            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center">
+              {/* TODO: Replace this placeholder archive tile with the real mission image asset once available. */}
+              <div className="h-16 w-16 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             <div className="p-6">
@@ -115,10 +112,9 @@ export default function MissionArchive() {
           {/* CARD 4 */}
           <ScrollReveal delay={0.29} className="group rounded-[32px] overflow-hidden border border-orange-500/10 bg-white/5 backdrop-blur-xl hover:border-orange-500/30 transition-all duration-500">
 
-            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center text-orange-200 text-2xl">
-
-              Community
-
+            <div className="h-[340px] bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center">
+              {/* TODO: Replace this placeholder archive tile with the real mission image asset once available. */}
+              <div className="h-16 w-16 rounded-full border border-orange-500/20 bg-orange-500/10" />
             </div>
 
             <div className="p-6">
@@ -139,7 +135,7 @@ export default function MissionArchive() {
         </div>
 
         {/* BUTTON */}
-        <ScrollReveal delay={0.12} className="flex justify-center mt-20">
+        <ScrollReveal delay={0.12} className="mt-16 flex justify-center">
 
           <Link
             href="/archives"
